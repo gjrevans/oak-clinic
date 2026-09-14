@@ -43,6 +43,7 @@ nothing else moved.
 | `/people/<slug>` | 8 | `src/pages/people/[slug].astro` + `src/layouts/PersonProfile.astro` |
 | `/articles` | 1 | `src/pages/articles/index.astro` |
 | `/articles/<slug>` | 28 | `src/pages/articles/[slug].astro` + `src/layouts/ArticlePost.astro` + `src/content/articles/*.md` |
+| `/articles/search.json` | 1 | `src/pages/articles/search.json.ts` (endpoint, the search index for `/articles`) |
 | `/contact` | 1 | `src/pages/contact.astro` |
 | `/iv-therapy` | 1 | `src/pages/iv-therapy.astro`. Not in the nav, but the URL is live and stays. |
 | `/robots.txt` | 1 | `src/pages/robots.txt.ts` (endpoint, varies per environment) |
@@ -320,6 +321,15 @@ by `src/content.config.ts` with the `glob` loader. Frontmatter: `title`, `slug`,
 people slug). `Post Body` HTML is converted with turndown; figures, images,
 `target="_blank"` links and tables are kept as raw HTML rather than being
 flattened to markdown.
+
+`/articles` carries a local search box: a vanilla script filters the rendered
+cards in place, matching every whitespace-separated term of at least two
+characters as a substring of the card's title, summary, author or body text,
+and mirrors the query into `?q=` with `history.replaceState`. Titles, summaries
+and authors come from `data-` attributes already on the page, so filtering
+starts on the first keystroke, while bodies come from `/articles/search.json`,
+a prerendered index built at build time from the same content collection and
+fetched once, lazily, on first input.
 
 `src/lib/articles.ts` is the only reader: `getArticles()` (newest first by
 `publishedOn`), `getFeaturedArticles(limit = 3)`, `getArticlesByAuthor(slug)`,
