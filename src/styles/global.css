@@ -14,7 +14,7 @@
  * (#2f7d49 primary, #868e96 muted) sit below 4.5:1 on a dark ground.
  */
 :root {
-  --radius: 1rem;
+  --radius: 0.5rem;
 
   --background: #ffffff;
   --foreground: #1f2a23;

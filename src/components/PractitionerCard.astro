@@ -29,12 +29,12 @@ const flip = index % 2 === 1;
   variant === 'card' ? (
     <article
       class:list={[
-        'group flex h-full flex-col overflow-hidden rounded-2xl border border-hairline bg-card transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-foreground/5',
+        'group flex h-full flex-col overflow-hidden rounded-lg border border-hairline bg-card transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-foreground/5',
         className,
       ]}
     >
       {portrait && (
-        <a href={profileHref} class="oak-frame-sm block bg-surface">
+        <a href={profileHref} class="block overflow-hidden bg-surface">
           <img
             src={portrait.src}
             alt={portraitAlt}
