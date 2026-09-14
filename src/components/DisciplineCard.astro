@@ -1,0 +1,64 @@
+---
+import type { Discipline } from '@/data/types';
+
+interface Props {
+  discipline: Discipline;
+  class?: string;
+}
+
+const { discipline, class: className } = Astro.props;
+
+// The whole card is the link, so the CMS description is flattened to inline
+// HTML first: paragraph wrappers come off so `line-clamp-3` counts lines of
+// text rather than one block, and the two descriptions that carry an anchor
+// are unwrapped rather than nested inside the card's own anchor.
+const summary = discipline.description
+  .replace(/<\/p>\s*<p[^>]*>/gi, ' ')
+  .replace(/<\/?p[^>]*>/gi, '')
+  .replace(/<a\b[^>]*>|<\/a>/gi, '')
+  .trim();
+---
+
+<a
+  href={`/disciplines/${discipline.slug}`}
+  class:list={[
+    'group flex h-full flex-col rounded-lg border border-hairline bg-card p-6 transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-foreground/5',
+    className,
+  ]}
+>
+  <span class="flex size-14 shrink-0 items-center justify-center rounded-full bg-accent">
+    {
+      discipline.icon ? (
+        <img
+          src={discipline.icon.src}
+          alt=""
+          width={discipline.icon.width}
+          height={discipline.icon.height}
+          loading="lazy"
+          decoding="async"
+          class="size-7"
+        />
+      ) : (
+        <span class="size-3 rounded-full bg-accent-foreground" aria-hidden="true" />
+      )
+    }
+  </span>
+  <h3 class="mt-5 text-lg">{discipline.name}</h3>
+  <div class="mt-3 line-clamp-3 text-sm text-muted-foreground" set:html={summary} />
+  <span class="mt-auto flex items-center gap-1.5 pt-4 font-medium text-primary">
+    Learn more
+    <svg
+      class="size-4 transition-transform duration-200 group-hover:translate-x-1"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  </span>
+</a>

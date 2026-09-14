@@ -1,7 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
-import DisciplineAccordion from '@/components/DisciplineAccordion.astro';
+import DisciplineCard from '@/components/DisciplineCard.astro';
 import PageHero from '@/components/PageHero.astro';
 import PractitionerCard from '@/components/PractitionerCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
@@ -74,10 +74,16 @@ const partnerPhoto = STATIC_IMAGES.partner.photo;
         lede="Oak Clinic whole-heartedly welcomes any and all health concerns. Some of our practitioners do however have a focus in the following areas."
         class="reveal"
       />
-      <DisciplineAccordion
-        disciplines={DISCIPLINES_BY_ORDER}
-        class="reveal reveal-delay-1 mx-auto mt-12 max-w-4xl"
-      />
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          DISCIPLINES_BY_ORDER.map((discipline, i) => (
+            <DisciplineCard
+              discipline={discipline}
+              class={`reveal reveal-delay-${Math.min(i + 1, 5)}`}
+            />
+          ))
+        }
+      </div>
     </div>
   </section>
 

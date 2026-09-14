@@ -47,7 +47,7 @@ export interface Discipline {
   slug: string;
   metaTitle?: string;
   metaDescription?: string;
-  /** Short HTML, hero and accordion copy. */
+  /** Short HTML, hero and card copy. */
   description: string;
   icon?: ImageAsset;
   bookingLink?: string;

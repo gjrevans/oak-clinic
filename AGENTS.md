@@ -58,7 +58,7 @@ nothing else moved.
 - **No UI framework.** No React, no client-side router.
   `src/components/ui/button.ts` is a plain `cva` class recipe, not a component;
   everything else is `.astro`. The interactive pieces (theme toggle, mobile
-  nav, discipline accordion, reveal-on-scroll) are vanilla scripts.
+  nav, article search, reveal-on-scroll) are vanilla scripts.
 - **Nunito** self-hosted through `@fontsource/nunito`. One family for
   everything; no Google Fonts request at runtime.
 - **astro-seo** for head tags, **@astrojs/sitemap** for the sitemap
@@ -162,11 +162,11 @@ regress them:
 | | |
 |---|---|
 | **Type weights** | All headings are **Nunito 400**, with `h4` to `h6` at 500. Buttons are 500, tag pills 600. `@fontsource/nunito` imports 300/400/500/600/700. The site does not ship 800, and the old 700/800 heading weights are gone: Oak's headings are light and airy, not bold. |
-| **`oak-frame`** | The `oak-frame` utility (`border-radius: 0.5rem 5rem`) and its `oak-frame-sm` variant reproduce the live site's `.content-image-wrapper` 8px/80px asymmetric corners on content images, portraits and thumbnails. This asymmetric corner is part of Oak's visual identity. Do not flatten it to a plain `rounded-2xl`. |
+| **`oak-frame`** | The `oak-frame` utility (`border-radius: 0.5rem 5rem`) and its `oak-frame-sm` variant reproduce the live site's `.content-image-wrapper` 8px/80px asymmetric corners on content images, portraits and thumbnails. This asymmetric corner is part of Oak's visual identity. Do not flatten it to a plain `rounded-lg` (0.5rem). |
 | **Hero treatment** | `PageHero.astro` fades the photo into the page ground with a bottom-up `from-background` gradient and `text-foreground` type, matching the live `.hero-image-overlay`: a white fade in light mode, a dark ground in dark mode. It is **not** a dark-green wash with white type. |
 
 The rest of the polish, for reference: sections `py-16 md:py-24`, `max-w-7xl`,
-`px-6`; cards `rounded-2xl` with a hairline border and a soft hover lift;
+`px-6`; cards `rounded-lg` (0.5rem) with a hairline border and a soft hover lift;
 buttons `rounded-full`; discipline icons on a soft-green circular plate; tag
 pills `rounded-full`; every image carries real `alt`, `width`, `height` and
 `loading="lazy"` except the hero, which is `fetchpriority="high"`.
@@ -292,7 +292,7 @@ Helper exports:
 | | `NAV_SERVICES` | `visibleInNavigation` (4 of 12) | nav's secondary row |
 | | `INITIAL_SERVICES` / `FOLLOW_UP_SERVICES` | Split on `initialAppointment` | `/services`, further filtered by `visibleInServicesPage` |
 | | `getService(slug)` | | person pages |
-| `disciplines.ts` | `DISCIPLINES` / `DISCIPLINES_BY_ORDER` | All 8, `order` ascending | home accordion, footer, `/disciplines/<slug>` paths |
+| `disciplines.ts` | `DISCIPLINES` / `DISCIPLINES_BY_ORDER` | All 8, `order` ascending | home card grid, footer, `/disciplines/<slug>` paths |
 | | `NAV_DISCIPLINES` | `visibleInNavigation` (7 of 8) | **no call sites**, see below |
 | | `getDiscipline(slug)` | | person pages |
 | `people.ts` | `PEOPLE` | All 8 live rows | |
