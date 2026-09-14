@@ -110,7 +110,7 @@ const partnerPhoto = STATIC_IMAGES.partner.photo;
         lede="Meet our growing team of care practitioners."
         class="reveal"
       />
-      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {
           FEATURED_PEOPLE.map((person, i) => (
             <PractitionerCard
@@ -175,7 +175,7 @@ const partnerPhoto = STATIC_IMAGES.partner.photo;
               </a>
             </div>
           </div>
-          <div class="oak-frame border border-hairline bg-surface">
+          <div class="oak-frame self-start border border-hairline bg-surface">
             <img
               src={partnerPhoto.src}
               alt={partnerPhoto.alt}
