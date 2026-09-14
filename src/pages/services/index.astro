@@ -1,0 +1,164 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import PageHero from '@/components/PageHero.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import { buttonVariants } from '@/components/ui/button';
+import { FOLLOW_UP_SERVICES, INITIAL_SERVICES } from '@/data/services';
+import { SITE } from '@/data/site';
+import { STATIC_IMAGES } from '@/data/static-images';
+import { breadcrumbSchema, collectionPageSchema } from '@/lib/schema';
+
+const title = 'Services';
+const description =
+  'Learn about the services available at Oak Clinic including Naturopathic Consultations, Massage Therapy, Acupuncture, Prescription Renewals, Lab Testing and More.';
+
+const initial = INITIAL_SERVICES.filter((service) => service.visibleInServicesPage);
+const followUp = FOLLOW_UP_SERVICES.filter((service) => service.visibleInServicesPage);
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: title, href: '/services' },
+];
+
+const supplements = STATIC_IMAGES.services.supplements;
+const dispensary = STATIC_IMAGES.services.herbalDispensary;
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={[collectionPageSchema(title, description, '/services'), breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    title={title}
+    description={description}
+    image={STATIC_IMAGES.services.hero}
+    cta={{ label: 'Book Now', href: SITE.bookingUrl }}
+  />
+
+  <div class="border-b border-border bg-surface">
+    <Breadcrumb crumbs={crumbs} class="mx-auto max-w-7xl px-6 py-4" />
+  </div>
+
+  <section class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="reveal mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl md:text-4xl">Initial Appointments</h2>
+        <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+          If this is your first time visiting us at Oak Clinic, please select from one of our initial appointment options below. Otherwise, please scroll down to see a list of follow up appointment options.
+        </p>
+        <p class="mt-4">
+          <a
+            href="/articles/important-reminder-about-direct-billing"
+            class="font-medium text-primary underline underline-offset-4 transition-colors hover:text-primary-hover"
+          >
+            Important Reminder About Direct Billing and Insurance Coverage
+          </a>
+        </p>
+      </div>
+      <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {
+          initial.map((service, i) => (
+            <ServiceCard
+              service={service}
+              class={`reveal reveal-delay-${Math.min(i + 1, 5)}`}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <SectionHeading
+        title="Follow Up Appointments"
+        lede="These services are available once you've had an initial appointment with one of our practitioners."
+        class="reveal"
+      />
+      <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {
+          followUp.map((service, i) => (
+            <ServiceCard
+              service={service}
+              class={`reveal reveal-delay-${Math.min(i + 1, 5)}`}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl items-start gap-10 px-6 md:grid-cols-3 md:gap-14">
+      <div class="reveal oak-frame border border-hairline bg-surface">
+        <img
+          src={supplements.src}
+          alt={supplements.alt}
+          width={supplements.width}
+          height={supplements.height}
+          loading="lazy"
+          decoding="async"
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <div class="reveal reveal-delay-1 md:col-span-2">
+        <h2 class="text-2xl md:text-3xl">Professional Supplements</h2>
+        <div class="prose-oak mt-5">
+          <p>
+            When choosing supplements we look for third party testing, ensuring purity, bioavailability and potency. We offer a variety of professional brands in house and have access to 300+ professional brands through our Fullscript account.
+          </p>
+          <p>
+            Every supplement you take needs to serve a purpose. Ideally, that purpose is to rebalance an individual's natural rhythm and can be discontinued after its treatment course is complete.
+          </p>
+        </div>
+        <div class="mt-7 rounded-xl bg-accent p-5 text-accent-foreground">
+          <h3 class="text-sm font-medium tracking-wide uppercase">Please note:</h3>
+          <p class="mt-2 leading-relaxed">
+            The clinic has recently expanded the selection of natural products and welcomes walk-ins for pick-ups. Feel free to reach out or come in and chat with our helpful staff if your interested in learning more.
+          </p>
+        </div>
+        <a
+          href={SITE.fullscriptUrl}
+          target="_blank"
+          rel="noopener"
+          class={buttonVariants({ className: 'mt-7' })}
+        >
+          Place an Order
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl items-start gap-10 px-6 md:grid-cols-3 md:gap-14">
+      <div class="reveal oak-frame border border-hairline bg-background md:order-2">
+        <img
+          src={dispensary.src}
+          alt={dispensary.alt}
+          width={dispensary.width}
+          height={dispensary.height}
+          loading="lazy"
+          decoding="async"
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <div class="reveal reveal-delay-1 md:col-span-2">
+        <h2 class="text-2xl md:text-3xl">Herbal Dispensary</h2>
+        <div class="prose-oak mt-5">
+          <p>
+            Oak Clinic carries a small dispensary of tincture and teas, with huge therapeutic action. A tincture is a highly concentrated herb or herbal formula that has been extracted using alcohol. These alcohol extractions have been made in small batches and each batch has been third party tested to ensure highest potency and quality.
+          </p>
+          <p>
+            Having a herbal dispensary allows us to make a personalized tincture or tea in quantities and ratios that best fit your therapeutic needs. Some herbs can only be found in therapeutic doses from clinical dispensaries, such as ours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand body="We've made booking easy with our online form. Simply select a service above or click the link below to begin our simple booking process." />
+</Base>

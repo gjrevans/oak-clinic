@@ -1,0 +1,176 @@
+---
+import ArticleCard from '@/components/ArticleCard.astro';
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { buttonVariants } from '@/components/ui/button';
+import { getPerson } from '@/data/people';
+import { SITE } from '@/data/site';
+import type { Person } from '@/data/types';
+import { formatDate, getRecentArticles, type Article } from '@/lib/articles';
+import { displaySummary } from '@/lib/people';
+import { articleSchema, breadcrumbSchema } from '@/lib/schema';
+
+interface Props {
+  article: Article;
+  author?: Person;
+}
+
+const { article, author } = Astro.props;
+const { title, slug, summary, publishedOn, mainImage } = article.data;
+
+const avatar = author?.avatar ?? author?.thumbnailImage;
+const authorSummary = author ? displaySummary(author) : undefined;
+const bookingHref = author?.bookingLink || SITE.bookingUrl;
+
+const recent = await getRecentArticles(3, slug);
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Articles', href: '/articles' },
+  { name: title, href: `/articles/${slug}` },
+];
+
+const schema = [
+  ...(author
+    ? [articleSchema({ title, description: summary, slug, publishedOn, image: mainImage, author })]
+    : []),
+  breadcrumbSchema(crumbs),
+];
+---
+
+<Base title={title} description={summary} ogImage={mainImage?.src} schema={schema}>
+  <div class="border-b border-hairline bg-surface">
+    <Breadcrumb crumbs={crumbs} class="mx-auto max-w-7xl px-6 py-3" />
+  </div>
+
+  <article class="bg-background py-12 md:py-16">
+    <div class="mx-auto max-w-4xl px-6">
+      {
+        mainImage && (
+          <div class="oak-frame border border-hairline bg-surface">
+            <img
+              src={mainImage.src}
+              alt={mainImage.alt}
+              width={mainImage.width}
+              height={mainImage.height}
+              fetchpriority="high"
+              decoding="async"
+              class="aspect-[3/2] w-full object-cover"
+            />
+          </div>
+        )
+      }
+
+      <h1 class="mt-10 text-3xl md:text-5xl">{title}</h1>
+
+      <div class="mt-7 flex items-center gap-3 border-b border-hairline pb-7">
+        {
+          avatar && (
+            <img
+              src={avatar.src}
+              alt={author?.name ?? ''}
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+              class="h-12 w-12 shrink-0 rounded-full object-cover"
+            />
+          )
+        }
+        <div>
+          {
+            author ? (
+              <a
+                href={`/people/${author.slug}`}
+                class="font-medium transition-colors hover:text-primary"
+              >
+                {author.name}
+              </a>
+            ) : (
+              <span class="font-medium">{SITE.name}</span>
+            )
+          }
+          <time datetime={publishedOn.toISOString()} class="block text-sm text-muted-foreground">
+            {formatDate(publishedOn)}
+          </time>
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-10 max-w-3xl px-6">
+      <div class="prose-oak">
+        <slot />
+      </div>
+
+      {
+        author && (
+          <aside class="mt-14 rounded-2xl border border-hairline bg-surface p-6 md:p-8">
+            <h2 class="text-xl">About the Author</h2>
+            <div class="mt-5 flex flex-col gap-5 sm:flex-row sm:items-start">
+              {avatar && (
+                <img
+                  src={avatar.src}
+                  alt={author.name}
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                  decoding="async"
+                  class="h-16 w-16 shrink-0 rounded-full object-cover"
+                />
+              )}
+              <div>
+                <a
+                  href={`/people/${author.slug}`}
+                  class="text-lg font-medium transition-colors hover:text-primary"
+                >
+                  {author.name}
+                </a>
+                <p class="mt-1 text-sm font-medium tracking-wide text-primary">{author.title}</p>
+                {authorSummary && (
+                  <p class="mt-3 leading-relaxed text-muted-foreground">{authorSummary}</p>
+                )}
+                {author.bookingText && (
+                  <div class="prose-oak mt-4 text-[0.9375rem]" set:html={author.bookingText} />
+                )}
+                {author.bookable && (
+                  <a
+                    href={bookingHref}
+                    target="_blank"
+                    rel="noopener"
+                    class={buttonVariants({ className: 'mt-6' })}
+                  >
+                    Book Now
+                  </a>
+                )}
+              </div>
+            </div>
+          </aside>
+        )
+      }
+    </div>
+  </article>
+
+  {
+    recent.length > 0 && (
+      <section class="border-t border-border bg-surface py-16 md:py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <SectionHeading
+            title="Recent Articles"
+            lede="Keep up to date with the here and now at Oak Clinic as we post interesting information and articles from time to time."
+            class="reveal"
+          />
+          <div class="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {recent.map((entry, index) => (
+              <ArticleCard
+                article={entry}
+                author={getPerson(entry.data.author)}
+                class={`reveal reveal-delay-${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</Base>

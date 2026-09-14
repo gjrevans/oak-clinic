@@ -1,0 +1,737 @@
+{
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238db9905321637843fd480_holding-4818e2e2be4715de80d033067f72a81abdd0209919696e63d1cb291cee81a799.jpeg": {
+    "src": "/images/heroes/articles.webp",
+    "width": 1920,
+    "height": 1281
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238db9905321637843fd480_holding-4818e2e2be4715de80d033067f72a81abdd0209919696e63d1cb291cee81a799.jpg": {
+    "src": "/images/heroes/articles.webp",
+    "width": 1920,
+    "height": 1281
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238dcbe4cbee829f2630466_supplements-078948c90505f61f0e93f42f71aa6b4485966fc8762c189187afdb954a04d85b.jpeg": {
+    "src": "/images/pages/services-supplements.webp",
+    "width": 1000,
+    "height": 1500
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238dcbe4cbee829f2630466_supplements-078948c90505f61f0e93f42f71aa6b4485966fc8762c189187afdb954a04d85b.jpg": {
+    "src": "/images/pages/services-supplements.webp",
+    "width": 1000,
+    "height": 1500
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238de395c3bc1c64996feea_dispensary-5547d4bba2dfdba6ec56ba47f01bd2f90204fac1efc2f1d2760e3b555aa3982a.jpeg": {
+    "src": "/images/pages/services-herbal-dispensary.webp",
+    "width": 1000,
+    "height": 1500
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238de395c3bc1c64996feea_dispensary-5547d4bba2dfdba6ec56ba47f01bd2f90204fac1efc2f1d2760e3b555aa3982a.jpg": {
+    "src": "/images/pages/services-herbal-dispensary.webp",
+    "width": 1000,
+    "height": 1500
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238e36b112c4437af51d790_iv-therapy-3-8aa95159f72327bae0cab7541318342061c9160bbf1f59957bbb6f6e6d0953a8.jpeg": {
+    "src": "/images/pages/iv-therapy-2.webp",
+    "width": 1068,
+    "height": 1600
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238e36b112c4437af51d790_iv-therapy-3-8aa95159f72327bae0cab7541318342061c9160bbf1f59957bbb6f6e6d0953a8.jpg": {
+    "src": "/images/pages/iv-therapy-2.webp",
+    "width": 1068,
+    "height": 1600
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238e36b11591c9d702f852e_iv-therapy-2-bc5448dae1c96e23eab17ad3b4906d3bf9de27065e87d6ded6bb7edcd0a158fe.jpeg": {
+    "src": "/images/pages/iv-therapy-3.webp",
+    "width": 1000,
+    "height": 1500
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238e36b11591c9d702f852e_iv-therapy-2-bc5448dae1c96e23eab17ad3b4906d3bf9de27065e87d6ded6bb7edcd0a158fe.jpg": {
+    "src": "/images/pages/iv-therapy-3.webp",
+    "width": 1000,
+    "height": 1500
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238e36be77ea27e02824785_iv-therapy-1-9fbbceaa46211e39eb1dbe8abe5fa4ef39079a76ef7a97704d7c4acfdfa28681.jpeg": {
+    "src": "/images/pages/iv-therapy-1.webp",
+    "width": 1000,
+    "height": 1500
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6238e36be77ea27e02824785_iv-therapy-1-9fbbceaa46211e39eb1dbe8abe5fa4ef39079a76ef7a97704d7c4acfdfa28681.jpg": {
+    "src": "/images/pages/iv-therapy-1.webp",
+    "width": 1000,
+    "height": 1500
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/623926d9efbba77ce7c3b5ba_hero-home.jpeg": {
+    "src": "/images/heroes/team.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/623926d9efbba77ce7c3b5ba_hero-home.jpg": {
+    "src": "/images/heroes/team.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/62392727881c5c797c575613_hero-services.jpeg": {
+    "src": "/images/heroes/services.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/62392727881c5c797c575613_hero-services.jpg": {
+    "src": "/images/heroes/services.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6239286380f792944f02375b_hero-iv-therapy.jpeg": {
+    "src": "/images/heroes/iv-therapy.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6239286380f792944f02375b_hero-iv-therapy.jpg": {
+    "src": "/images/heroes/iv-therapy.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/62392b5682d662c0318e5508_hero-contact.jpeg": {
+    "src": "/images/heroes/contact.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/62392b5682d662c0318e5508_hero-contact.jpg": {
+    "src": "/images/heroes/contact.webp",
+    "width": 1920,
+    "height": 1080
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6a063b113a258e009194e751_framework.avif": {
+    "src": "/images/pages/framework-nutrition.webp",
+    "width": 1000,
+    "height": 1000
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6a063c2d0fad169c3a539ad4_Framework%20Nutrition%20(5).png": {
+    "src": "/images/pages/framework-nutrition-logo.webp",
+    "width": 1000,
+    "height": 200
+  },
+  "https://cdn.prod.website-files.com/6234fcdf951f256d90a06e0d/6a1a36e878c306601d3490ad_211016_Oak%20Clinic%202021_6060_websize.avif": {
+    "src": "/images/heroes/home.webp",
+    "width": 1600,
+    "height": 1068
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6237aacc3349ba1fdf2d38a7_ayla-634ec1b18df4a5e7ca1a8e86fe644e235da43da55cf24137b688e9376f385eb5.jpg": {
+    "src": "/images/people/dr-ayla-andrus.webp",
+    "width": 650,
+    "height": 974
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6237aaf99462e23319f00f7a_dr-ayla-andrus-nd-91334d8c2aae0cc243eb0e7dd5a66bf32d501f7a2f00d851df7ccce2c3b16bc7.jpeg": {
+    "src": "/images/people/dr-ayla-andrus-thumb.webp",
+    "width": 800,
+    "height": 600,
+    "avatar": {
+      "src": "/images/people/dr-ayla-andrus-avatar.webp",
+      "width": 160,
+      "height": 120
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6237aaf99462e23319f00f7a_dr-ayla-andrus-nd-91334d8c2aae0cc243eb0e7dd5a66bf32d501f7a2f00d851df7ccce2c3b16bc7.jpg": {
+    "src": "/images/people/dr-ayla-andrus-thumb.webp",
+    "width": 800,
+    "height": 600,
+    "avatar": {
+      "src": "/images/people/dr-ayla-andrus-avatar.webp",
+      "width": 160,
+      "height": 120
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6238d4db6612a3a3044640bc_naturopathic_consultation.svg": {
+    "src": "/images/icons/naturopathic-consultation.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6238d6f464460ecbc63dbfc0_iv_initial.svg": {
+    "src": "/images/icons/iv-initial-6238d6f4.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6238d87f11591cbd4c2ee85d_massage_initial.svg": {
+    "src": "/images/icons/massage-initial.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6238d8c44fc3e239501a9fa9_follow_up.svg": {
+    "src": "/images/icons/follow-up.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6238d8fee77ea2809881f02d_prescription_renewal.svg": {
+    "src": "/images/icons/prescription-renewal.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6238d98daf57333beb57702c_accupuncture_follow_up.svg": {
+    "src": "/images/icons/accupuncture-follow-up.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6238d9f84f92b312d5ffc006_lab_testing.svg": {
+    "src": "/images/icons/lab-testing.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6238f20fb9fa3e0bd890a5cb_violet-andrus-cfcc8b664bf55bb87011cee3a47c1eaa7abfbc2da8a86448e25d28635120ff06.jpeg": {
+    "src": "/images/people/violet-andrus.webp",
+    "width": 800,
+    "height": 600,
+    "avatar": {
+      "src": "/images/people/violet-andrus-avatar.webp",
+      "width": 160,
+      "height": 120
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6238f20fb9fa3e0bd890a5cb_violet-andrus-cfcc8b664bf55bb87011cee3a47c1eaa7abfbc2da8a86448e25d28635120ff06.jpg": {
+    "src": "/images/people/violet-andrus.webp",
+    "width": 800,
+    "height": 600,
+    "avatar": {
+      "src": "/images/people/violet-andrus-avatar.webp",
+      "width": 160,
+      "height": 120
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/62392c6be548aef636cf0c70_dr-anouk-thumb.jpg": {
+    "src": "/images/people/dr-anouk-chaumont-thumb.webp",
+    "width": 800,
+    "height": 600,
+    "avatar": {
+      "src": "/images/people/dr-anouk-chaumont-avatar.webp",
+      "width": 160,
+      "height": 120
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/62392cc7f4d2375c304f02c2_emma-carp-thumb.jpg": {
+    "src": "/images/people/emma-carpenter-thumb.webp",
+    "width": 800,
+    "height": 600,
+    "avatar": {
+      "src": "/images/people/emma-carpenter-avatar.webp",
+      "width": 160,
+      "height": 120
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/62392cf16f48009626a652f1_emma-carp-head.jpg": {
+    "src": "/images/people/emma-carpenter.webp",
+    "width": 800,
+    "height": 1200
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/641deed98db3d56ee1b78a28_erik-karits-jMsAqu4FZz0-unsplash.jpg": {
+    "src": "/images/articles/naturopathic-support-for-lyme-disease-and-cancer-now-in-the-peace-region/main.webp",
+    "width": 640,
+    "height": 427
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/641deff2ac5a64613644593c_nordwood-themes-EZSm8xRjnX0-unsplash.jpg": {
+    "src": "/images/articles/optimizing-your-first-appointment/main.webp",
+    "width": 640,
+    "height": 427
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/641df06d8db3d50f1db95f24_eugene-chystiakov-fD7Yf8mGDqY-unsplash.jpg": {
+    "src": "/images/articles/importance-of-a-healthy-digestive-system/main.webp",
+    "width": 640,
+    "height": 424
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/641dfbb36191026089c9d6d6_edward-cisneros-_H6wpor9mjs-unsplash.jpg": {
+    "src": "/images/articles/menopause-basics/main.webp",
+    "width": 640,
+    "height": 427
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/641dffa201d8c420c4383b86_jake-melara-Yh6K2eTr_FY-unsplash.jpg": {
+    "src": "/images/articles/lyme-disease-basics/main.webp",
+    "width": 640,
+    "height": 427
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/641e242204d85a8121d81e28_giorgio-trovato-XatMS2NXIpo-unsplash.jpg": {
+    "src": "/images/articles/bristol-stool-chart/main.webp",
+    "width": 640,
+    "height": 427
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/641e24ff54670bc39f9f72b7_nino-liverani-CKxD_Qh6ULY-unsplash.jpg": {
+    "src": "/images/articles/pros-of-proper-posture/main.webp",
+    "width": 640,
+    "height": 425
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/648bcab84f6e6b847c78dacd_62391e250bdab56aeda49b5f_digestive-health.svg": {
+    "src": "/images/icons/digestive-health.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/648bccce4f6e6b847c7aff9b_62391dc67d303c62df118fbb_femal_health.svg": {
+    "src": "/images/icons/femal-health.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/648bcd1fbe88fa270a357a6d_62391dc6a59e64c27a70623b_lyme_disease.svg": {
+    "src": "/images/icons/lyme-disease.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6498792ba0156a4bb0e89349_katie-bernotsky-iXXbzlNLyts-unsplash.jpg": {
+    "src": "/images/articles/what-you-need-to-know-about-polycystic-ovary-syndrome/main.webp",
+    "width": 1200,
+    "height": 906
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/649884a902a8257f4a7585ba_pexels-karolina-grabowska-4226876.jpg": {
+    "src": "/images/articles/breaking-up-with-diet-culture-repairing-your-relationship-with-food/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64dc590423e0c39909154501_nst.jpg": {
+    "src": "/images/services/neurostructural-integration-therapy-3.webp",
+    "width": 1080,
+    "height": 1620
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64dc59641b62dc3a96af1e2c_6237ce29d488bc757d5f0778_nst.jpg": {
+    "src": "/images/heroes/neurostructural-integration-therapy.webp",
+    "width": 1600,
+    "height": 1068
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e13175d796daaa32d691ea_6238e120af573300e857bc99_brands.png": {
+    "src": "/images/disciplines/naturopathic-medicine-body-1.webp",
+    "width": 961,
+    "height": 532
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e136a034258b929fb3240a_mental-health.svg": {
+    "src": "/images/icons/mental-health.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e138e9da6414527cd587a3_6238d6f464460ecbc63dbfc0_iv_initial.svg": {
+    "src": "/images/icons/iv-initial.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e14f1ffd32664a89fb4d0d_pexels-mikhail-nilov-6975763.jpg": {
+    "src": "/images/services/cold-laser-therapy-2.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e152420730dbe6f3ec9493_pexels-alma-thai-4353249.jpg": {
+    "src": "/images/heroes/acupuncture.webp",
+    "width": 1280,
+    "height": 853
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e152ba7e6b55300f6a3277_pexels-antoni-shkraba-6076104.jpg": {
+    "src": "/images/services/acupuncture-3.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e15d9075ddbdb0287e82ca_pexels-antoni-shkraba-5215012.jpg": {
+    "src": "/images/heroes/cardiovascular-health.webp",
+    "width": 1279,
+    "height": 853
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e15de80fbae08f6a9f942f_AylaA2-3.jpg": {
+    "src": "/images/heroes/naturopathic-consultation.webp",
+    "width": 1024,
+    "height": 683
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e15ecf2999d194bfab19f4_211016_Oak%20Clinic%202021_5792_websize.jpg": {
+    "src": "/images/heroes/pain-management.webp",
+    "width": 1600,
+    "height": 1068
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e160a0ff85250113caa917_211016_Oak%20Clinic%202021_6222_edit_websize.jpg": {
+    "src": "/images/heroes/naturopathic-medicine.webp",
+    "width": 1600,
+    "height": 1068
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e161290260c5f43a3c1ecf_pexels-krivec-ales-547116.jpg": {
+    "src": "/images/heroes/lyme-disease.webp",
+    "width": 1279,
+    "height": 891
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e161ae3fe6b8cc38633caa_pexels-elle-hughes-1549280.jpg": {
+    "src": "/images/heroes/female-health.webp",
+    "width": 1280,
+    "height": 906
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e162066c62384d98a93836_pexels-karolina-grabowska-4963854.jpg": {
+    "src": "/images/heroes/digestive-concerns.webp",
+    "width": 1280,
+    "height": 853
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e3ba058079f29523f52358_AylaA2-1.jpg": {
+    "src": "/images/heroes/follow-up-appointment.webp",
+    "width": 1024,
+    "height": 683
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e3baf43d58acae46a8f98d_gian-cescon-00ByEXKcSkA-unsplash%20(1).jpg": {
+    "src": "/images/services/follow-up-appointment-3.webp",
+    "width": 640,
+    "height": 959
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e3dbd15f048a13775075fb_pexels-andrea-piacquadio-3799786.jpg": {
+    "src": "/images/articles/traditional-chinese-medicine-pulse-and-tongue-diagnosis/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e3e26924a94dbad942aff4_katherine-hanlon-QgcdtM9rA5s-unsplash.jpg": {
+    "src": "/images/heroes/follow-up-acupuncture.webp",
+    "width": 1920,
+    "height": 1242
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e3e513719ba62a8b7a1a02_pexels-antoni-shkraba-6076141.jpg": {
+    "src": "/images/services/follow-up-acupuncture-1.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e3fc866569bd5bb14e2807_pexels-fauxels-3184578.jpg": {
+    "src": "/images/services/lab-testing-3.webp",
+    "width": 1200,
+    "height": 2059
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e3fcfa132445e2ba2dbbe1_pexels-thirdman-5327586.jpg": {
+    "src": "/images/services/follow-up-appointment-1.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e3fe2dca33b8be461006d0_pexels-elina-fairytale-3865565.jpg": {
+    "src": "/images/services/follow-up-acupuncture-2.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e3fe7636bc70b1372d2360_pexels-antoni-shkraba-6076105.jpg": {
+    "src": "/images/services/follow-up-acupuncture-3.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e4008452679261596e2095_pexels-cottonbro-studio-3202235.jpg": {
+    "src": "/images/services/naturopathic-consultation-3.webp",
+    "width": 1200,
+    "height": 1796
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e400fe36b2d3597871cca5_pexels-karolina-grabowska-4491492.jpg": {
+    "src": "/images/services/follow-up-appointment-2.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e40193756b9cd35a28ba54_pexels-polina-tankilevitch-3735747.jpg": {
+    "src": "/images/heroes/lab-testing.webp",
+    "width": 1280,
+    "height": 853
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e4057d8e6d511042d34770_pexels-polina-tankilevitch-3735705.jpg": {
+    "src": "/images/services/lab-testing-2.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e405b8a33ec9eaa372ae34_pexels-cottonbro-studio-7578808.jpg": {
+    "src": "/images/services/lab-testing-1.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e557a47004a0b5a81cafbc_pexels-tima-miroshnichenko-5407208.jpg": {
+    "src": "/images/services/prescription-renewal-1.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e5582baa357eb0ebacf389_pexels-polina-tankilevitch-3873163.jpg": {
+    "src": "/images/services/prescription-renewal-2.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e55833f89f94c11fe95519_pexels-cottonbro-studio-7578798.jpg": {
+    "src": "/images/services/prescription-renewal-3.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e5593284b2bf3e01027d7d_pexels-ready-made-3850759.jpg": {
+    "src": "/images/heroes/prescription-renewal.webp",
+    "width": 1280,
+    "height": 853
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e7c99ba24b3af453c6baca_pexels-koolshooters-6628700.jpg": {
+    "src": "/images/services/neurostructural-integration-therapy-1.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e80115b462789ede2f1e76_pexels-elina-fairytale-3865561.jpg": {
+    "src": "/images/services/massage-therapy-2.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e932e28ff84c2903fcedb8_pexels-juan-antonio-garci%CC%81afiloso-rodri%CC%81guez-17108475.jpg": {
+    "src": "/images/articles/exploring-the-distinction-between-traditional-tcm-acupuncture-and-dry-needling/main.webp",
+    "width": 1200,
+    "height": 797
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e9374d0fcd0e26a56b1f34_element5-digital-WCPg9ROZbM0-unsplash.jpg": {
+    "src": "/images/heroes/headaches-migraines.webp",
+    "width": 1920,
+    "height": 1282
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64e96c2be764544da833065a_6238d9273281504feba30055_facial_accupuncture_follow_up.svg": {
+    "src": "/images/icons/facial-accupuncture-follow-up.svg",
+    "width": 100,
+    "height": 100
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64eab797751383659061cdde_pexels-rdne-stock-project-8184255.jpg": {
+    "src": "/images/articles/thyroid-panel-markers-offed-by-naturopathic-doctors/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64ebcbe15eb38b96eb17ceac_bristol-stool-chart.jpg": {
+    "src": "/images/articles/bristol-stool-chart/body-1.webp",
+    "width": 1200,
+    "height": 819
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64ec0cdebdbe81d1cf3c1f49_pexels-cottonbro-studio-7243777.jpg": {
+    "src": "/images/articles/benefits-of-acupuncture-for-headaches-relief/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/64eeadb818fce9c73da1313c_pexels-antoni-shkraba-6076124%20(2).jpg": {
+    "src": "/images/services/acupuncture-2.webp",
+    "width": 640,
+    "height": 960
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655e96323febdd2a57ff2356_231118_untitled%20shoot_0469_edit_websize.jpg": {
+    "src": "/images/people/dr-elena-moore.webp",
+    "width": 800,
+    "height": 1199
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655e968885b3d3061c0d621f_231118_untitled%20shoot_0632_edit_websize.jpg": {
+    "src": "/images/people/ally-ratzke.webp",
+    "width": 800,
+    "height": 1199
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655e968e258dfbdf0daaf6b4_231118_untitled%20shoot_0675_edit_websize.jpg": {
+    "src": "/images/people/ally-ratzke-thumb.webp",
+    "width": 800,
+    "height": 534,
+    "avatar": {
+      "src": "/images/people/ally-ratzke-avatar.webp",
+      "width": 160,
+      "height": 106
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655e96f65681d9c323af1c39_231118_untitled%20shoot_0551_edit_websize.jpg": {
+    "src": "/images/people/megan-piccinin.webp",
+    "width": 800,
+    "height": 1199
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655e96fa87969e81ad23c502_231118_untitled%20shoot_0558_edit_websize.jpg": {
+    "src": "/images/people/megan-piccinin-thumb.webp",
+    "width": 800,
+    "height": 534,
+    "avatar": {
+      "src": "/images/people/megan-piccinin-avatar.webp",
+      "width": 160,
+      "height": 106
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655ea35c53dff76a6dafe346_231118_untitled%20shoot_0742_edit_websize.jpg": {
+    "src": "/images/heroes/cold-laser-therapy.webp",
+    "width": 1600,
+    "height": 1068
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655ea41b9da0d48695996898_Laser.jpg": {
+    "src": "/images/services/cold-laser-therapy-1.webp",
+    "width": 712,
+    "height": 1068
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655ea4ccb00e7f586d8a1f09_pexels-kerim-eveyik-16032366.jpg": {
+    "src": "/images/services/cold-laser-therapy-3.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655ea628abe83ec0ba4d6521_pexels-anna-tarazevich-6560289.jpg": {
+    "src": "/images/heroes/massage-therapy.webp",
+    "width": 1279,
+    "height": 853
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655ea6bc057d9a6cb26706ca_megan.jpeg": {
+    "src": "/images/services/massage-therapy-1.webp",
+    "width": 712,
+    "height": 1068
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655ea6de044c5a3b2cb47cbd_64e7fd9b0ac543d605ec0e3f_pexels-elina-fairytale-3865496.jpg": {
+    "src": "/images/services/massage-therapy-3.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655ea7aea54af33597edeaf0_all%20a.jpg": {
+    "src": "/images/services/acupuncture-1.webp",
+    "width": 710,
+    "height": 1068
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655ea856a0c0d03200ec0c5b_elena.jpeg": {
+    "src": "/images/services/naturopathic-consultation-1.webp",
+    "width": 710,
+    "height": 1068
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655ea976a99ee7aa9a1b37ad_charlesdeluvio-2is2GQovngg-unsplash.jpg": {
+    "src": "/images/services/naturopathic-consultation-2.webp",
+    "width": 640,
+    "height": 960
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/655eaada8b5294a93189c5dd_231118_untitled%20shoot_0507_edit_websize.jpg": {
+    "src": "/images/people/dr-elena-moore-thumb.webp",
+    "width": 800,
+    "height": 534,
+    "avatar": {
+      "src": "/images/people/dr-elena-moore-avatar.webp",
+      "width": 160,
+      "height": 106
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/657f7ed99fa7ecf8496ea903_pexels-shvets-production-8413161.jpg": {
+    "src": "/images/services/pap-smear-and-cervical-screening-1.webp",
+    "width": 640,
+    "height": 960
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/657f82aa34aadd0f86574516_sam-mcnamara-p0ZvBVpW3KY-unsplash.jpg": {
+    "src": "/images/heroes/pap-smear-and-cervical-screening.webp",
+    "width": 640,
+    "height": 424
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/657f85565c5eb2fa000efb11_fusion-medical-animation-rnr8D3FNUNY-unsplash%20(1).jpg": {
+    "src": "/images/services/pap-smear-and-cervical-screening-2.webp",
+    "width": 1080,
+    "height": 1920
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6580d78f2b7d046f4eea0fd3_pexels-kristina-paukshtite-112324.jpg": {
+    "src": "/images/articles/cervical-screening-services-with-dr-elena/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6580d7921170019ad61c8e8e_pexels-kristina-paukshtite-112324%20(1).jpg": {
+    "src": "/images/articles/cervical-screening-services-with-dr-elena/thumb.webp",
+    "width": 640,
+    "height": 427
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/65c6a7b7a3feaa0fd7082ff4_211016_Oak%20Clinic%202021_6060_websize.jpg": {
+    "src": "/images/articles/job-posting-part-time-receptionist/main.webp",
+    "width": 1200,
+    "height": 801
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/66970b1c674e3e5a5751e59e_pexels-ketut-subiyanto-4719950.jpg": {
+    "src": "/images/articles/the-importance-of-the-right-balance-in-electrolyte-drinks/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/66f5d3c8040a8858f7544807_pexels-artempodrez-4492065.jpg": {
+    "src": "/images/articles/prescriptions-by-naturopathic-doctors-in-bc-what-we-can-and-cant-prescribe/main.webp",
+    "width": 1200,
+    "height": 675
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/66f5d460040a8858f7550a05_pexels-artempodrez-4492065%20copy.jpeg": {
+    "src": "/images/articles/prescriptions-by-naturopathic-doctors-in-bc-what-we-can-and-cant-prescribe/thumb.webp",
+    "width": 1200,
+    "height": 802
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/66ff49e9b2c45720551ecc30_211016_Oak%20Clinic%202021_6241_edit_websize.jpg": {
+    "src": "/images/people/dr-anouk-chaumont.webp",
+    "width": 800,
+    "height": 1199
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6737e0f9b852713551def29c_MV-Photo%20Portrait%20.jpg": {
+    "src": "/images/people/mackenzie-vandergaag.webp",
+    "width": 800,
+    "height": 1199
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6737e10cc44b7ecac238b53e_MV-Photo%20Landscape.jpg": {
+    "src": "/images/people/mackenzie-vandergaag-thumb.webp",
+    "width": 800,
+    "height": 560,
+    "avatar": {
+      "src": "/images/people/mackenzie-vandergaag-avatar.webp",
+      "width": 160,
+      "height": 112
+    }
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/67a1157eb44bc22c626a3864_pexels-olly-3760067.jpg": {
+    "src": "/images/articles/important-reminder-about-direct-billing/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6972aff9a81335f727c5efca_pexels-shvets-production-9775440.jpg": {
+    "src": "/images/articles/acne---going-beyond-skincare/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6972cf82557be3ef4d5ff1f9_pexels-rdne-6539914.jpg": {
+    "src": "/images/articles/perimenopause-and-menopause-care-knowing-your-options/main.webp",
+    "width": 1200,
+    "height": 799
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/69966407ef1632a0c6125a0c_testalize-me-KWb_41kG0GE-unsplash.jpg": {
+    "src": "/images/articles/testing-by-naturopathic-doctors-in-british-columbia-what-we-can-and-cant-order/main.webp",
+    "width": 1200,
+    "height": 900
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/69966702a9c4f3e47495fc74_pexels-towfiqu-barbhuiya-3440682-12625114.jpg": {
+    "src": "/images/articles/protein-powder-how-to-choose-the-right-one-for-you/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/69c1f965a9157c0a9e1daad3_pexels-artempodrez-4492051.jpg": {
+    "src": "/images/articles/what-is-a-peptide-what-you-should-know-before-you-try-one/main.webp",
+    "width": 1200,
+    "height": 675
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/69e80c76ea2ffa3154177217_mariana-rascao-Dw8ctrIIrIs-unsplash.jpg": {
+    "src": "/images/articles/magnesium-which-type-is-right-for-you/main.webp",
+    "width": 1200,
+    "height": 900
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a0f6d2ce9f0fc06a3e51346_pexels-haberdoedas-32532049%20copy.jpeg": {
+    "src": "/images/articles/glp-1-medications-whats-all-the-fuss/main.webp",
+    "width": 1200,
+    "height": 900
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a0f6e2dd1712cfcb65ee16c_pexels-haberdoedas-32532049%20copy.jpeg": {
+    "src": "/images/articles/glp-1-medications-whats-all-the-fuss/thumb.webp",
+    "width": 1200,
+    "height": 796
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a1773cc9d383baa423a955c_pexels-simeon-maryska-2003803697-34242724.jpg": {
+    "src": "/images/articles/menopausal-hormone-therapy-expanded-msp-coverage-in-bc/main.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a1775c2d3fcdd024dfbe47c_pexels-simeon-maryska-2003803697-34242724.jpg": {
+    "src": "/images/articles/menopausal-hormone-therapy-expanded-msp-coverage-in-bc/thumb.webp",
+    "width": 1200,
+    "height": 800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a1a2db3e7f2110948b02ad7_pexels-pixabay-289323.jpg": {
+    "src": "/images/heroes/allergy-testing-sublingual-immunotherapy.webp",
+    "width": 1280,
+    "height": 853
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a1a308f20874759ab3bea54_pexels-mart-production-7089301.jpg": {
+    "src": "/images/services/allergy-testing-sublingual-immunotherapy-2.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a1a3165573e699c49a365fb_pexels-tahir-osman-109306362-16705117.jpg": {
+    "src": "/images/services/allergy-testing-sublingual-immunotherapy-3.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a1a32570e5ac090ffed3304_pexels-allan-carvalho-264847051-14594857.jpg": {
+    "src": "/images/services/allergy-testing-sublingual-immunotherapy-1.webp",
+    "width": 1200,
+    "height": 1500
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a2486d167218c4fda0d2c15_pexels-zeleboba-4376052.jpg": {
+    "src": "/images/articles/why-your-iron-supplement-isnt-working---and-what-to-do-about-it/main.webp",
+    "width": 1200,
+    "height": 900
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a24874f1e8f3a885b3ab76c_Smaller%20pexels-zeleboba-4376052.jpeg": {
+    "src": "/images/articles/why-your-iron-supplement-isnt-working---and-what-to-do-about-it/thumb.webp",
+    "width": 1200,
+    "height": 794
+  },
+  "https://cdn.prod.website-files.com/6237aa71c8b7159014231f9a/6a3ec95a2a6015f659a5f9da_pexels-helenalopes-27087223.jpg": {
+    "src": "/images/articles/naturopathic-care-from-anywhere-how-virtual-visits-work-at-oak-clinic/main.webp",
+    "width": 1200,
+    "height": 800
+  }
+}

@@ -1,0 +1,6 @@
+# Astro content-hashes everything under /_astro (CSS, JS, fonts), so a new
+# build always gets new URLs: safe to let browsers cache these forever.
+# Everything else (HTML, images, videos) keeps Pages' default etag
+# revalidation, because media files are replaced under the same names.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

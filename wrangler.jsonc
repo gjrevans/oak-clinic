@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Static site on Workers static assets: no Worker script, just `dist`.
+  // Cloudflare steers new static hosting here rather than Pages, and the
+  // workers.dev host can be switched off, which pages.dev never could.
+  "name": "oak-clinic",
+  "compatibility_date": "2026-09-14",
+  "assets": {
+    "directory": "./dist",
+    // build.format is 'file', so /contact.html serves at /contact and a
+    // trailing-slash request redirects to it: same URLs the canonicals use.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

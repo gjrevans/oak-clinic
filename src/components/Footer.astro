@@ -1,0 +1,184 @@
+---
+import { FOOTER_LINKS, SITE, addressLine } from '@/data/site';
+import { SERVICES_BY_PRIORITY } from '@/data/services';
+import { DISCIPLINES_BY_ORDER } from '@/data/disciplines';
+import { FEATURED_PEOPLE } from '@/data/people';
+import { buttonVariants } from '@/components/ui/button';
+
+const year = new Date().getFullYear();
+const linkClass = 'text-footer-muted transition-colors hover:text-footer-foreground';
+---
+
+<footer class="bg-footer text-footer-foreground">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+      <div>
+        <!-- The footer ground is dark in both themes, so this always uses the
+             white wordmark. -->
+        <img
+          src="/images/logo-white.png"
+          alt={SITE.name}
+          width="240"
+          height="100"
+          class="h-[50px] w-[120px]"
+          loading="lazy"
+          decoding="async"
+        />
+        <p class="mt-4 text-base font-medium leading-snug">{SITE.footerName}</p>
+        <ul class="mt-5 space-y-2 text-sm">
+          {
+            FOOTER_LINKS.map((link) => (
+              <li>
+                <a href={link.href} class={linkClass}>
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-medium">Services</h2>
+        <ul class="mt-5 space-y-2 text-sm">
+          {
+            SERVICES_BY_PRIORITY.map((service) => (
+              <li>
+                <a href={`/services/${service.slug}`} class={linkClass}>
+                  {service.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-medium">Disciplines</h2>
+        <ul class="mt-5 space-y-2 text-sm">
+          {
+            DISCIPLINES_BY_ORDER.map((discipline) => (
+              <li>
+                <a href={`/disciplines/${discipline.slug}`} class={linkClass}>
+                  {discipline.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-medium">Team Members</h2>
+        <ul class="mt-5 space-y-2 text-sm">
+          {
+            FEATURED_PEOPLE.map((person) => (
+              <li>
+                <a href={`/people/${person.slug}`} class={linkClass}>
+                  {person.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-sm font-medium">Clinic Location</h2>
+          <address class="mt-5 text-sm not-italic leading-relaxed text-footer-muted">
+            {SITE.address.street}<br />
+            {SITE.address.city}, {SITE.address.region}, {SITE.address.postalCode}, Canada
+          </address>
+          <a
+            href={SITE.mapUrl}
+            target="_blank"
+            rel="noopener"
+            class="mt-3 inline-block text-sm font-medium underline underline-offset-4 transition-opacity hover:opacity-80"
+          >
+            Get Directions
+          </a>
+        </div>
+
+        <div>
+          <h2 class="text-sm font-medium">Contact Us</h2>
+          <ul class="mt-5 space-y-2 text-sm">
+            <li><a href={SITE.phoneHref} class={linkClass}>{SITE.phone}</a></li>
+            <li><a href={SITE.tollFreeHref} class={linkClass}>{SITE.tollFree}</a></li>
+            <li><a href={`mailto:${SITE.email}`} class={linkClass}>{SITE.email}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mt-14 grid gap-8 border-t border-white/15 pt-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-center"
+    >
+      <div>
+        <h2 class="text-sm font-medium">Reviews</h2>
+        <p class="mt-3 max-w-md text-sm leading-relaxed text-footer-muted">
+          We would love to hear about your experience. Add your Google Review today.
+        </p>
+        <a
+          href={SITE.reviewUrl}
+          target="_blank"
+          rel="noopener"
+          class="mt-3 inline-block text-sm font-medium underline underline-offset-4 transition-opacity hover:opacity-80"
+        >
+          Add a Review
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <a
+          href={SITE.social.facebook}
+          target="_blank"
+          rel="noopener"
+          aria-label={`${SITE.name} on Facebook`}
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/25 transition-colors hover:border-footer-foreground"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href={SITE.social.instagram}
+          target="_blank"
+          rel="noopener"
+          aria-label={`${SITE.name} on Instagram`}
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/25 transition-colors hover:border-footer-foreground"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 5.68a4.16 4.16 0 1 0 0 8.32 4.16 4.16 0 0 0 0-8.32Zm0 6.86a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4Zm5.3-7.03a.97.97 0 1 1-1.94 0 .97.97 0 0 1 1.94 0Z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href={SITE.bookingUrl}
+          target="_blank"
+          rel="noopener"
+          class={buttonVariants({ variant: 'inverse' })}
+        >
+          Book Now
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="mt-10 flex flex-col gap-3 border-t border-white/15 pt-6 text-xs text-footer-muted sm:flex-row sm:items-center sm:justify-between"
+    >
+      <p>&copy; {year} {SITE.footerName}. {addressLine()}.</p>
+      <p>
+        Site by <a
+          href="https://vrginteractive.com"
+          target="_blank"
+          rel="noopener"
+          class="font-medium underline underline-offset-4 transition-colors hover:text-footer-foreground"
+        >VRG Interactive</a>
+      </p>
+    </div>
+  </div>
+</footer>

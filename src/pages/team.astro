@@ -1,0 +1,65 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import PageHero from '@/components/PageHero.astro';
+import PractitionerCard from '@/components/PractitionerCard.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { FEATURED_PEOPLE, STAFF } from '@/data/people';
+import { SITE } from '@/data/site';
+import { STATIC_IMAGES } from '@/data/static-images';
+import { withDisplaySummary } from '@/lib/people';
+import { breadcrumbSchema, collectionPageSchema } from '@/lib/schema';
+
+const title = 'Our Team';
+const lede =
+  'Meet our team of Naturopathic Doctors, Acupuncturists, Massage Professionals and General Staff. The Oak Clinic team is here to support all of the Greater Peace Region and Dawson Creek.';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Team', href: '/team' },
+];
+
+const staff = STAFF.map(withDisplaySummary);
+---
+
+<Base
+  title={title}
+  description={lede}
+  schema={[collectionPageSchema(title, lede, '/team'), breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    title={title}
+    description={lede}
+    image={STATIC_IMAGES.team.hero}
+    cta={{ label: 'Book Now', href: SITE.bookingUrl }}
+  />
+
+  <div class="border-b border-hairline bg-surface">
+    <Breadcrumb crumbs={crumbs} class="mx-auto max-w-7xl px-6 py-3" />
+  </div>
+
+  <section class="bg-background py-16 md:py-24">
+    <div class="mx-auto max-w-7xl space-y-16 px-6 md:space-y-24">
+      {
+        FEATURED_PEOPLE.map((person, index) => (
+          <PractitionerCard person={person} variant="row" index={index} class="reveal" />
+        ))
+      }
+    </div>
+  </section>
+
+  {
+    staff.length > 0 && (
+      <section class="border-t border-border bg-surface py-16 md:py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <SectionHeading title="Our Staff" class="reveal" />
+          <div class="mt-14 space-y-16 md:space-y-24">
+            {staff.map((person, index) => (
+              <PractitionerCard person={person} variant="row" index={index} class="reveal" />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</Base>

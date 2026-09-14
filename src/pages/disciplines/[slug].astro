@@ -1,0 +1,15 @@
+---
+import DisciplineLanding from '@/layouts/DisciplineLanding.astro';
+import { DISCIPLINES_BY_ORDER } from '@/data/disciplines';
+
+export function getStaticPaths() {
+  return DISCIPLINES_BY_ORDER.map((discipline) => ({
+    params: { slug: discipline.slug },
+    props: { discipline },
+  }));
+}
+
+const { discipline } = Astro.props;
+---
+
+<DisciplineLanding discipline={discipline} />

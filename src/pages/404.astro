@@ -1,0 +1,30 @@
+---
+import Base from '@/layouts/Base.astro';
+import { buttonVariants } from '@/components/ui/button';
+import { SITE } from '@/data/site';
+---
+
+<Base title="Page not found" description="That page does not exist." noindex>
+  <section class="flex min-h-[60vh] items-center justify-center px-6 py-24">
+    <div class="max-w-xl text-center">
+      <p class="text-sm font-medium text-primary">404</p>
+      <h1 class="mt-5 text-4xl md:text-5xl">We could not find that page</h1>
+      <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+        The page you were after is not here. Browse our services, or call the clinic and
+        reception will point you the right way.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+        <a href="/" class={buttonVariants({ size: 'lg' })}>Back home</a>
+        <a href="/services" class={buttonVariants({ variant: 'secondary', size: 'lg' })}>
+          Browse services
+        </a>
+      </div>
+      <a
+        href={SITE.phoneHref}
+        class="mt-8 inline-block text-muted-foreground transition-colors hover:text-primary"
+      >
+        Call {SITE.phone}
+      </a>
+    </div>
+  </section>
+</Base>

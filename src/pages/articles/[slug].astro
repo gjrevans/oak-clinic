@@ -1,0 +1,22 @@
+---
+import ArticlePost from '@/layouts/ArticlePost.astro';
+import { getPerson } from '@/data/people';
+import { getArticles } from '@/lib/articles';
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getArticles();
+  return articles.map((article) => ({
+    params: { slug: article.data.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const author = getPerson(article.data.author);
+---
+
+<ArticlePost article={article} author={author}>
+  <Content />
+</ArticlePost>

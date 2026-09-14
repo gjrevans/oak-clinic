@@ -1,0 +1,15 @@
+---
+import ServiceLanding from '@/layouts/ServiceLanding.astro';
+import { SERVICES_BY_PRIORITY } from '@/data/services';
+
+export function getStaticPaths() {
+  return SERVICES_BY_PRIORITY.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+---
+
+<ServiceLanding service={service} />

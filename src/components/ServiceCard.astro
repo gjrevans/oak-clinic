@@ -1,0 +1,75 @@
+---
+import { buttonVariants } from '@/components/ui/button';
+import { SITE } from '@/data/site';
+import type { Service } from '@/data/types';
+
+interface Props {
+  service: Service;
+  class?: string;
+}
+
+const { service, class: className } = Astro.props;
+
+const detailHref = `/services/${service.slug}`;
+const bookingHref = service.bookingLink || SITE.bookingUrl;
+const note = !service.bookableInServicesPage && service.bookingText ? service.bookingText : undefined;
+---
+
+<article
+  class:list={[
+    'flex h-full flex-col rounded-2xl border border-hairline bg-card p-7 transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-foreground/5',
+    className,
+  ]}
+>
+  {
+    service.icon && (
+      <span class="flex size-16 shrink-0 items-center justify-center rounded-full bg-accent">
+        <img
+          src={service.icon.src}
+          alt=""
+          width={service.icon.width}
+          height={service.icon.height}
+          loading="lazy"
+          decoding="async"
+          class="size-8"
+        />
+      </span>
+    )
+  }
+  <h3 class="mt-6 text-xl">
+    <a href={detailHref} class="transition-colors hover:text-primary">{service.name}</a>
+  </h3>
+  {
+    service.description && (
+      <div
+        class="prose-oak mt-3 text-[0.9375rem]"
+        set:html={service.description}
+      />
+    )
+  }
+  {
+    service.priceRange && (
+      <p class="mt-5 border-t border-hairline pt-5 text-lg font-medium text-foreground">
+        {service.priceRange}
+      </p>
+    )
+  }
+  <div class="mt-auto flex flex-col gap-2.5 pt-6">
+    <a href={detailHref} class={buttonVariants({ variant: 'secondary', className: 'w-full' })}>
+      Learn More
+    </a>
+    {
+      service.bookableInServicesPage && (
+        <a
+          href={bookingHref}
+          target="_blank"
+          rel="noopener"
+          class={buttonVariants({ className: 'w-full' })}
+        >
+          Book Now
+        </a>
+      )
+    }
+    {note && <div class="prose-oak text-sm" set:html={note} />}
+  </div>
+</article>

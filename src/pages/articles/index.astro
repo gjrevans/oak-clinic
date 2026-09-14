@@ -1,0 +1,53 @@
+---
+import ArticleCard from '@/components/ArticleCard.astro';
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import PageHero from '@/components/PageHero.astro';
+import { getPerson } from '@/data/people';
+import { SITE } from '@/data/site';
+import { STATIC_IMAGES } from '@/data/static-images';
+import { getArticles } from '@/lib/articles';
+import { breadcrumbSchema, collectionPageSchema } from '@/lib/schema';
+
+const title = 'Articles';
+const lede =
+  'Check out our latest articles, blogs and guest posts to stay informed and up to date with what is going on at Oak Clinic.';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Articles', href: '/articles' },
+];
+
+const articles = await getArticles();
+---
+
+<Base
+  title={title}
+  description={lede}
+  schema={[collectionPageSchema(title, lede, '/articles'), breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    title={title}
+    description={lede}
+    image={STATIC_IMAGES.articles.hero}
+    cta={{ label: 'Book Now', href: SITE.bookingUrl }}
+  />
+
+  <div class="border-b border-hairline bg-surface">
+    <Breadcrumb crumbs={crumbs} class="mx-auto max-w-7xl px-6 py-3" />
+  </div>
+
+  <section class="bg-background py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        articles.map((article, index) => (
+          <ArticleCard
+            article={article}
+            author={getPerson(article.data.author)}
+            class={`reveal reveal-delay-${(index % 3) + 1}`}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,77 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import PageHero from '@/components/PageHero.astro';
+import PractitionerCard from '@/components/PractitionerCard.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { getPerson } from '@/data/people';
+import { SITE } from '@/data/site';
+import type { Discipline } from '@/data/types';
+import { breadcrumbSchema, disciplineSchema } from '@/lib/schema';
+
+interface Props {
+  discipline: Discipline;
+}
+
+const { discipline } = Astro.props;
+
+const bookingHref = discipline.bookingLink || SITE.bookingUrl;
+// The live hero prints the Meta Description; the rich-text description is the
+// home page accordion copy.
+const lede = discipline.metaDescription;
+// A few people still point at disciplines that have since been archived, so
+// every relation is resolved through the getter and misses are dropped.
+const practitioners = discipline.practitioners
+  .map(getPerson)
+  .filter((person) => person !== undefined);
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: discipline.name, href: `/disciplines/${discipline.slug}` },
+];
+---
+
+<Base
+  title={discipline.metaTitle ?? discipline.name}
+  description={discipline.metaDescription}
+  schema={[disciplineSchema(discipline), breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    title={discipline.name}
+    description={lede}
+    image={discipline.heroImage}
+    cta={{ label: 'Book Now', href: bookingHref }}
+  />
+
+  <div class="border-b border-border bg-surface">
+    <Breadcrumb crumbs={crumbs} class="mx-auto max-w-7xl px-6 py-4" />
+  </div>
+
+  {
+    discipline.pageContent && (
+      <section class="py-16 md:py-24">
+        <div class="mx-auto max-w-3xl px-6">
+          <div class="prose-oak reveal" set:html={discipline.pageContent} />
+        </div>
+      </section>
+    )
+  }
+
+  {
+    practitioners.length > 0 && (
+      <section class="border-t border-border bg-surface py-16 md:py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <SectionHeading title="Practitioners Focusing In:" lede={discipline.name} class="reveal" />
+          <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {practitioners.map((person, i) => (
+              <PractitionerCard
+                person={person}
+                class={`reveal reveal-delay-${Math.min(i + 1, 5)}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</Base>

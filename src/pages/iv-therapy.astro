@@ -1,0 +1,170 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import PageHero from '@/components/PageHero.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { buttonVariants } from '@/components/ui/button';
+import { SITE } from '@/data/site';
+import { STATIC_IMAGES } from '@/data/static-images';
+import { breadcrumbSchema } from '@/lib/schema';
+
+const title = 'IV Therapy';
+const lede =
+  'High dose Intravenous (IV) Vitamin Therapy that bypasses the digestive tract for better absorption and cellular exposure.';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'IV Therapy', href: '/iv-therapy' },
+];
+
+const steps = [
+  {
+    title: 'Initial Consultation',
+    body: 'Book a 15 minute initial consultation with our Naturopathic Doctors to determine if IV therapy is right for you.',
+  },
+  {
+    title: 'Blood Work',
+    body: 'Specific blood work needs to be completed at LifeLabs in Dawson Creek to ensure your safety.',
+  },
+  {
+    title: 'Schedule Treatment',
+    body: 'Once blood work has been received and approved, we will work with you to schedule a treatment protocol.',
+  },
+  {
+    title: 'IV Therapy',
+    body: 'Come to your appointment hydrated, fed and ready to relax. Drips typically take 30-45 minutes.',
+  },
+];
+
+const photos = STATIC_IMAGES.ivTherapy.sections;
+---
+
+<Base title={title} description={lede} schema={breadcrumbSchema(crumbs)}>
+  <PageHero
+    title={title}
+    description={lede}
+    image={STATIC_IMAGES.ivTherapy.hero}
+    cta={{ label: 'Book Now', href: SITE.bookingUrl }}
+  />
+
+  <div class="border-b border-hairline bg-surface">
+    <Breadcrumb crumbs={crumbs} class="mx-auto max-w-7xl px-6 py-3" />
+  </div>
+
+  <section class="bg-background py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <SectionHeading title="How It Works" class="reveal" />
+      <ol class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          steps.map((step, index) => (
+            <li class={`reveal reveal-delay-${index + 1} text-center`}>
+              <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent text-xl font-medium text-accent-foreground">
+                {index + 1}
+              </span>
+              <h4 class="mt-5 text-lg">{step.title}</h4>
+              <p class="mt-3 leading-relaxed text-muted-foreground">{step.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-6 md:grid-cols-2 md:gap-14">
+      <div class="reveal oak-frame border border-hairline">
+        <img
+          src={photos[0].src}
+          alt={photos[0].alt}
+          width={photos[0].width}
+          height={photos[0].height}
+          loading="lazy"
+          decoding="async"
+          class="aspect-[4/3] w-full object-cover"
+        />
+      </div>
+      <div class="reveal reveal-delay-1">
+        <h2 class="text-3xl md:text-4xl">What is IV Therapy?</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          IV or Intravenous therapy offers high dose vitamins, minerals and amino acids delivered
+          directly into the body, allowing for maximum absorption and utilization. All IV drips are
+          created for your unique needs after meeting with our Naturopathic Doctor. The IVs are
+          administered over 30-45 minutes in our new IV Lounge.
+        </p>
+        <a
+          href="https://theiv.ca/iv-therapy-vitamin-c-zinc-immune-boost/"
+          target="_blank"
+          rel="noopener"
+          class={buttonVariants({ className: 'mt-7' })}
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-background py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-6 md:grid-cols-2 md:gap-14">
+      <div class="reveal oak-frame border border-hairline md:order-2">
+        <img
+          src={photos[1].src}
+          alt={photos[1].alt}
+          width={photos[1].width}
+          height={photos[1].height}
+          loading="lazy"
+          decoding="async"
+          class="aspect-[4/3] w-full object-cover"
+        />
+      </div>
+      <div class="reveal reveal-delay-1">
+        <h2 class="text-3xl md:text-4xl">Benefits of IV Therapy</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          All IV bags are tailored to each individual. They can be used for general daily
+          functioning and specific conditions. Some examples for IV use are: Fatigue, Allergic
+          Conditions, Immune Function, Sleep Disorders or Lack of Concentration.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-6 md:grid-cols-2 md:gap-14">
+      <div class="reveal oak-frame border border-hairline">
+        <img
+          src={photos[2].src}
+          alt={photos[2].alt}
+          width={photos[2].width}
+          height={photos[2].height}
+          loading="lazy"
+          decoding="async"
+          class="aspect-[4/3] w-full object-cover"
+        />
+      </div>
+      <div class="reveal reveal-delay-1">
+        <h2 class="text-3xl md:text-4xl">Booking An Appointment</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          If you are interested in IV therapy, book an initial IV consultation to discuss the goals
+          of IV therapy, build a tailored treatment plan and assess for safety concerns.
+        </p>
+        <div class="mt-7 rounded-2xl border border-hairline bg-card p-5">
+          <h4 class="text-sm tracking-wide text-primary">PLEASE NOTE:</h4>
+          <p class="mt-2 leading-relaxed text-muted-foreground">
+            IV bags are made in house and on-demand for your specific treatment protocol. Therefore
+            a bag fee of ($80.00) will be charged for "no show" appointments.
+          </p>
+        </div>
+        <a
+          href={SITE.bookingUrl}
+          target="_blank"
+          rel="noopener"
+          class={buttonVariants({ className: 'mt-7' })}
+        >
+          Book Your Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>

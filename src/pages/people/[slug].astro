@@ -1,0 +1,12 @@
+---
+import PersonProfile from '@/layouts/PersonProfile.astro';
+import { PEOPLE } from '@/data/people';
+
+export function getStaticPaths() {
+  return PEOPLE.map((person) => ({ params: { slug: person.slug }, props: { person } }));
+}
+
+const { person } = Astro.props;
+---
+
+<PersonProfile person={person} />

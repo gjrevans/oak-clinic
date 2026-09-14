@@ -1,0 +1,137 @@
+---
+import '@fontsource/nunito/300.css';
+import '@fontsource/nunito/400.css';
+import '@fontsource/nunito/500.css';
+import '@fontsource/nunito/600.css';
+import '@fontsource/nunito/700.css';
+import '@/styles/global.css';
+import { SEO } from 'astro-seo';
+import Nav from '@/components/Nav.astro';
+import Footer from '@/components/Footer.astro';
+import { SITE } from '@/data/site';
+import { organizationSchema, websiteSchema } from '@/lib/schema';
+import { isProduction } from '@/lib/deploy';
+
+interface Props {
+  title: string;
+  description?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const { title, description, schema, ogImage: ogImageProp, noindex } = Astro.props;
+
+const pageTitle =
+  title === 'Home' ? `${SITE.name} | ${SITE.homeTitle}` : `${title} | ${SITE.name}`;
+const pageDesc = description || SITE.description;
+// build.format is 'file', so pathname arrives as "/contact.html": strip the
+// extension so the canonical matches the URL that is actually linked and
+// listed in the sitemap.
+const canonicalPath = Astro.url.pathname
+  .replace(/index\.html$/, '')
+  .replace(/\.html$/, '');
+// Astro.site follows SITE_URL, so a staging build self-canonicalises rather
+// than pointing every page at the production domain.
+const origin = Astro.site ?? new URL(SITE.url);
+const canonical = new URL(canonicalPath, origin).href;
+// Staging deploys are noindex regardless of what the page asked for.
+const blockIndexing = noindex || !isProduction();
+// Built against the deploy origin (like the canonical) rather than the
+// production domain, so a preview deploy's share cards resolve on the host
+// that is actually serving them.
+const ogImage = new URL(ogImageProp ?? '/images/og-default.png', origin).href;
+
+const pageSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+const schemas = [organizationSchema(), websiteSchema(), ...pageSchemas];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script is:inline>
+      // Runs before first paint so the correct theme is already applied and the
+      // page never flashes the wrong one. Light is the default ground, and the
+      // site follows the OS until the visitor picks a side.
+      (() => {
+        const stored = localStorage.getItem('theme');
+        const dark = stored
+          ? stored === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEO
+      title={pageTitle}
+      description={pageDesc}
+      canonical={canonical}
+      noindex={blockIndexing}
+      nofollow={blockIndexing}
+      openGraph={{
+        basic: {
+          title: pageTitle,
+          type: 'website',
+          image: ogImage,
+          url: canonical,
+        },
+        optional: {
+          siteName: SITE.name,
+          locale: 'en_CA',
+          description: pageDesc,
+        },
+        image: {
+          alt: `${SITE.name}: ${SITE.tagline}`,
+        },
+      }}
+      twitter={{
+        card: 'summary_large_image',
+        title: pageTitle,
+        description: pageDesc,
+        image: ogImage,
+      }}
+      extend={{
+        meta: [
+          { name: 'author', content: SITE.name },
+          { name: 'color-scheme', content: 'light dark' },
+          { name: 'theme-color', content: '#2f7d49' },
+        ],
+        link: [
+          { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' },
+          { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+          { rel: 'manifest', href: '/site.webmanifest' },
+        ],
+      }}
+    />
+    {
+      schemas.map((s) => (
+        <script is:inline type="application/ld+json" set:html={JSON.stringify(s)} />
+      ))
+    }
+  </head>
+  <body class="font-sans antialiased overflow-x-hidden">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-primary focus:px-5 focus:py-2 focus:font-medium focus:text-primary-foreground"
+    >
+      Skip to content
+    </a>
+    <Nav />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+
+    <script>
+      const io = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add('visible');
+          }),
+        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' },
+      );
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+---
+import { buttonVariants } from '@/components/ui/button';
+import type { ImageAsset } from '@/data/types';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: ImageAsset;
+  cta?: { label: string; href: string };
+}
+
+const { title, description, image, cta } = Astro.props;
+// The photo dissolves into the page: a bottom-up wash of the page ground,
+// opaque at the base and clear at the top, with dark type over it, exactly as
+// the live site does it. Both stops are tokens, so dark mode fades into the
+// green-charcoal ground instead. Without a photo the hero sits on the
+// soft-green plate.
+const external = cta ? /^https?:/.test(cta.href) : false;
+---
+
+<section
+  class:list={[
+    'relative flex min-h-[30rem] items-center overflow-hidden',
+    image ? 'bg-background text-foreground' : 'bg-accent text-accent-foreground',
+  ]}
+>
+  {
+    image && (
+      <>
+        <img
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          fetchpriority="high"
+          decoding="async"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-background via-background/75 via-50% to-transparent"
+          aria-hidden="true"
+        />
+      </>
+    )
+  }
+
+  <div class="relative mx-auto flex w-full max-w-7xl flex-col items-center px-6 py-16 text-center md:py-20">
+    <h1 class="max-w-4xl text-4xl md:text-6xl">{title}</h1>
+    {
+      description && (
+        <p
+          class:list={[
+            'mt-6 max-w-2xl text-lg leading-relaxed',
+            image ? 'text-muted-foreground' : 'text-accent-foreground/85',
+          ]}
+        >
+          {description}
+        </p>
+      )
+    }
+    {
+      cta && (
+        <a
+          href={cta.href}
+          target={external ? '_blank' : undefined}
+          rel={external ? 'noopener' : undefined}
+          class={buttonVariants({
+            variant: 'primary',
+            size: 'lg',
+            className: 'mt-8',
+          })}
+        >
+          {cta.label}
+        </a>
+      )
+    }
+  </div>
+</section>
