@@ -54,16 +54,16 @@ const partnerPhoto = STATIC_IMAGES.partner.photo;
 
         <div class="reveal reveal-delay-2 rounded-lg border border-hairline bg-card p-7 md:rounded-none md:border-0 md:bg-transparent md:p-0">
           <h2 class="text-xl">Hours of Operation</h2>
-          <table class="mt-4 w-full text-left">
+          <table class="mt-4 w-full text-left leading-relaxed">
             <caption class="sr-only">Clinic opening hours</caption>
             <tbody class="text-muted-foreground md:text-primary-foreground/90">
               {
                 SITE.hours.map((entry) => (
-                  <tr class="border-b border-hairline last:border-0 md:border-primary-foreground/15">
-                    <th scope="row" class="py-2 font-medium text-foreground md:text-primary-foreground">
+                  <tr>
+                    <th scope="row" class="font-normal">
                       {entry.day}
                     </th>
-                    <td class="py-2 text-right">{formatHours(entry)}</td>
+                    <td class="text-right">{formatHours(entry)}</td>
                   </tr>
                 ))
               }
