@@ -72,8 +72,9 @@ uppercase condensed headings, no monospace labels.** Those are DC's identity.
 Polish, concretely:
 
 - Generous vertical rhythm: sections `py-16 md:py-24`, max-width `7xl`, `px-6`.
-- Headings: Nunito 400, leading around 1.1, sentence case. h1 on heroes
-  `text-4xl md:text-6xl`.
+- Headings: Nunito 400, sentence case, on the live scale: h1 48px on 56px
+  (32px on 40px on phones), section titles 24px, card titles 18px, body 16px
+  on 26px. Do not go a step larger than the live site.
 - Cards: `rounded-2xl`, hairline border, soft shadow on hover with a 2px lift,
   `bg-card`. Discipline icons on a `bg-soft-green` circular plate.
 - Buttons: `rounded-full`, primary green with white text (7.0:1, fine), a

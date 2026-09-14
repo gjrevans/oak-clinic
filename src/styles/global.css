@@ -4,7 +4,7 @@
 
 /*
  * Oak Clinic: a calm, warm naturopathic clinic. Oak green on white, soft-green
- * plates, dark-sea-green footer and hero gradients, generous radii.
+ * plates, a white footer on the page ground, soft radii.
  *
  * Every colour is a semantic token declared twice, once on `:root` (light, the
  * default) and once on `.dark`, then exposed to Tailwind through
@@ -39,9 +39,9 @@
 
   --surface: #f8f9fa;
   --surface-strong: #eaeeea;
-  --footer: #184126;
-  --footer-foreground: #eef4f0;
-  --footer-muted: #a9c2b3;
+  --footer: #ffffff;
+  --footer-foreground: #1f2a23;
+  --footer-muted: #5f6b63;
   --announcement: #2f637d;
   --announcement-foreground: #ffffff;
 }
@@ -68,7 +68,7 @@
 
   --surface: #131e18;
   --surface-strong: #1b2922;
-  --footer: #0b1410;
+  --footer: #0f1a14;
   --footer-foreground: #e6ede8;
   --footer-muted: #9fb0a6;
   --announcement: #27526a;
@@ -144,7 +144,7 @@
      it. Weight is carried by size and colour, not by the face. */
   h1,
   h2 {
-    @apply font-sans font-normal leading-[1.1];
+    @apply font-sans font-normal leading-[1.15];
     letter-spacing: -0.01em;
   }
 

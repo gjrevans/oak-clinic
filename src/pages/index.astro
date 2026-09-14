@@ -26,14 +26,14 @@ const partnerPhoto = STATIC_IMAGES.partner.photo;
         class="grid gap-8 md:oak-frame md:relative md:z-10 md:-mt-16 md:grid-cols-3 md:gap-12 md:bg-primary md:px-12 md:py-10 md:text-primary-foreground"
       >
         <div class="reveal rounded-lg border border-hairline bg-card p-7 md:rounded-none md:border-0 md:bg-transparent md:p-0">
-          <h2 class="text-xl">Our Mission</h2>
+          <h2 class="text-lg">Our Mission</h2>
           <p class="mt-4 leading-relaxed text-muted-foreground md:text-primary-foreground/90">
             We are committed to using evidence-based medicine and collaborative care to help identify and treat the root cause of your health concerns, optimizing your wellbeing.
           </p>
         </div>
 
         <div class="reveal reveal-delay-1 flex flex-col rounded-lg border border-hairline bg-card p-7 md:rounded-none md:border-0 md:bg-transparent md:p-0">
-          <h2 class="text-xl">Appointments</h2>
+          <h2 class="text-lg">Appointments</h2>
           <p class="mt-4 leading-relaxed text-muted-foreground md:text-primary-foreground/90">
             Use our convenient online booking tool, or get in touch with our reception desk to schedule appointments with any of our practitioners.
           </p>
@@ -53,7 +53,7 @@ const partnerPhoto = STATIC_IMAGES.partner.photo;
         </div>
 
         <div class="reveal reveal-delay-2 rounded-lg border border-hairline bg-card p-7 md:rounded-none md:border-0 md:bg-transparent md:p-0">
-          <h2 class="text-xl">Hours of Operation</h2>
+          <h2 class="text-lg">Hours of Operation</h2>
           <table class="mt-4 w-full text-left leading-relaxed">
             <caption class="sr-only">Clinic opening hours</caption>
             <tbody class="text-muted-foreground md:text-primary-foreground/90">
@@ -63,7 +63,7 @@ const partnerPhoto = STATIC_IMAGES.partner.photo;
                     <th scope="row" class="font-normal">
                       {entry.day}
                     </th>
-                    <td class="text-right">{formatHours(entry)}</td>
+                    <td class="text-right font-bold">{formatHours(entry)}</td>
                   </tr>
                 ))
               }
@@ -96,7 +96,7 @@ const partnerPhoto = STATIC_IMAGES.partner.photo;
 
   <section class="py-16 md:py-24">
     <div class="mx-auto max-w-3xl px-6 text-center">
-      <h2 class="reveal text-3xl md:text-4xl">About Us</h2>
+      <h2 class="reveal text-2xl">About Us</h2>
       <p class="reveal reveal-delay-1 mt-5 text-lg leading-relaxed text-muted-foreground">
         Oak Clinic is a general, Naturopathic, family clinic located in Dawson Creek, British Columbia. We offer a variety of products and services to provide you with effective treatments for your unique healthcare care needs. We currently offer Naturopathic Consultations, Pharmaceuticals, Acupuncture, Cold Laser Therapy, Lab Testing and Massage Therapy. Come visit us in-clinic to browse our wide selection of professional grade supplements, personalized botanical prescriptions and medicinal teas.
       </p>

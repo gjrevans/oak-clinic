@@ -9,18 +9,25 @@ const year = new Date().getFullYear();
 const linkClass = 'text-footer-muted transition-colors hover:text-footer-foreground';
 ---
 
-<footer class="bg-footer text-footer-foreground">
+<footer class="border-t border-border bg-footer text-footer-foreground">
   <div class="mx-auto max-w-7xl px-6 py-16">
     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
       <div>
-        <!-- The footer ground is dark in both themes, so this always uses the
-             white wordmark. -->
+        <img
+          src="/images/logo.png"
+          alt={SITE.name}
+          width="240"
+          height="100"
+          class="logo-light h-[50px] w-[120px]"
+          loading="lazy"
+          decoding="async"
+        />
         <img
           src="/images/logo-white.png"
           alt={SITE.name}
           width="240"
           height="100"
-          class="h-[50px] w-[120px]"
+          class="logo-dark h-[50px] w-[120px]"
           loading="lazy"
           decoding="async"
         />
@@ -112,7 +119,7 @@ const linkClass = 'text-footer-muted transition-colors hover:text-footer-foregro
     </div>
 
     <div
-      class="mt-14 grid gap-8 border-t border-white/15 pt-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-center"
+      class="mt-14 grid gap-8 border-t border-hairline pt-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-center"
     >
       <div>
         <h2 class="text-sm font-medium">Reviews</h2>
@@ -135,7 +142,7 @@ const linkClass = 'text-footer-muted transition-colors hover:text-footer-foregro
           target="_blank"
           rel="noopener"
           aria-label={`${SITE.name} on Facebook`}
-          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/25 transition-colors hover:border-footer-foreground"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors hover:bg-primary-hover"
         >
           <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path
@@ -148,7 +155,7 @@ const linkClass = 'text-footer-muted transition-colors hover:text-footer-foregro
           target="_blank"
           rel="noopener"
           aria-label={`${SITE.name} on Instagram`}
-          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/25 transition-colors hover:border-footer-foreground"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors hover:bg-primary-hover"
         >
           <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path
@@ -160,7 +167,7 @@ const linkClass = 'text-footer-muted transition-colors hover:text-footer-foregro
           href={SITE.bookingUrl}
           target="_blank"
           rel="noopener"
-          class={buttonVariants({ variant: 'inverse' })}
+          class={buttonVariants()}
         >
           Book Now
         </a>
@@ -168,7 +175,7 @@ const linkClass = 'text-footer-muted transition-colors hover:text-footer-foregro
     </div>
 
     <div
-      class="mt-10 flex flex-col gap-3 border-t border-white/15 pt-6 text-xs text-footer-muted sm:flex-row sm:items-center sm:justify-between"
+      class="mt-10 flex flex-col gap-3 border-t border-hairline pt-6 text-xs text-footer-muted sm:flex-row sm:items-center sm:justify-between"
     >
       <p>&copy; {year} {SITE.footerName}. {addressLine()}.</p>
       <p>
